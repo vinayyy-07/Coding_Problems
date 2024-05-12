@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+	public:
+		int count_divisors(int n)
+		{
+		    //Code here.
+		    long long a=n,b=0;
+		    for(int i=1;i<=sqrt(a);i++)
+		    {
+		        if(a%i==0)
+		        {
+		            if(i%3==0)
+		            {
+		                b++;
+		            }
+		            if((a/i)!=i)
+		            {
+		                if((a/i)%3==0)
+		                {
+		                    b++;
+		                }
+		            }
+		            
+		        }
+		    }
+		    return b;
+		}
+};
+
+int main(){
+    int T;
+    cin >> T;
+    while(T--)
+    {
+    	int n;
+    	cin >> n;
+    	Solution ob;
+    	int ans = ob.count_divisors(n);
+    	cout << ans << "\n";
+    }
+	return 0;
+}

@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+  public:
+    double simpleInterest(int P, int R, int T) {
+        // code here
+        double s;
+        s=(P*T*R)/100.00;
+        return s;
+    }
+};
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int P, R, T;
+        cin >> P >> R >> T;
+        Solution ob;
+        cout << fixed << setprecision(2);
+        cout << ob.simpleInterest(P, R, T) << "\n";
+    }
+}

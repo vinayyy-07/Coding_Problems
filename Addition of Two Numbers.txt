@@ -1,0 +1,27 @@
+
+#include<bits/stdc++.h> 
+using namespace std; 
+
+class Solution{   
+public:
+    int addition(int A, int B){
+        
+        long long int n=A,m=B,s;
+        s=n+m;
+        return s;
+    }
+};
+
+int main() 
+{ 
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int A, B;
+        cin >> A >> B;
+        Solution ob;
+        cout << ob.addition(A,B) << endl;
+    }
+    return 0; 
+} 

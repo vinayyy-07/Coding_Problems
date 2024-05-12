@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+	public:
+		long long int reverse_digit(long long int n)
+		{
+		    long long sum=0,a;
+		    while (n!=0)
+		    {
+		        a=n%10;
+		        sum=sum*10+a;
+		        n=n/10;
+		    }
+		    return sum;
+		}
+};
+
+int main(){
+    int T;
+    cin >> T;
+    while(T--)
+    {
+    	long long int n;
+    	cin >> n;
+    	Solution ob;
+    	long long int  ans = ob.reverse_digit(n);
+    	cout << ans <<"\n";
+    }
+	return 0;
+}

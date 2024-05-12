@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+public:
+    long long nPr(int n, int r){
+        
+        long long p=1,q=1,a;
+        for (int i=1;i<=n;i++)
+         p=p*i;
+        for(int i=1;i<=n-r;i++)
+        {
+            if(n-r==0)
+             return 1;
+            q=q*i;
+        }
+            a=p/q;
+        return a;
+    }
+};
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n, r;
+        cin>>n>>r;
+        
+        Solution ob;
+        cout<<ob.nPr(n, r)<<endl;
+    }
+    return 0;
+}

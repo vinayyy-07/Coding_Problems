@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        
+        long long p=n;
+        long long sum=0,b,c,v=0;
+        while(p>0)
+        {
+            b=p%10;
+            sum=sum+b;
+            p=p/10;
+        }
+        long long q=sum;
+        while(sum!=0)
+        {
+            c=sum%10;
+            v=v*10+c;
+            sum=sum/10;
+        }
+        if(v==q)
+        return 1;
+        else 
+        return 0;
+    }
+};
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int N;
+        cin >> N;
+        Solution ob;
+        cout << ob.isDigitSumPalindrome(N) << "\n";
+    }
+}
